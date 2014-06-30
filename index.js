@@ -19,11 +19,19 @@ module.exports = {
 	mtToPounds: function (input) {
 		input = convertInput(input);
 
+		if (input < 0) {
+			return 0;
+		}
+
 		return input * poundsInMt;
 	},
 
 	poundsToMt: function (input) {
 		input = convertInput(input);
+
+		if (input < 0) {
+			return 0;
+		}
 
 		return input/poundsInMt;
 	}
