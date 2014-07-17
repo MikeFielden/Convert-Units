@@ -4,7 +4,7 @@ var _ = require('lodash')
 
 function convertInput (input) {
 	if (!_.isNumber(input)) {
-		input = +input;
+		input = Number(input);
 
 		if (!_.isNaN(input)) {
 			throw new Error('The input wasnt a number');
